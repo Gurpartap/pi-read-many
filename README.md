@@ -2,7 +2,7 @@
 
 [![pi coding agent](https://img.shields.io/badge/pi-coding%20agent-6f6bff?logo=terminal&logoColor=white)](https://pi.dev/)
 [![npm version](https://img.shields.io/npm/v/pi-read-many.svg)](https://www.npmjs.com/package/pi-read-many)
-[![license](https://img.shields.io/npm/l/pi-read-many.svg)](LICENSE)
+[![license](https://img.shields.io/github/license/Gurpartap/pi-read-many.svg)](LICENSE)
 
 Batch file reads for Pi via a single tool: **`read_many`**.
 
