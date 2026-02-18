@@ -1,0 +1,57 @@
+{
+  "name": "pi-read-many",
+  "version": "0.1.0",
+  "description": "Batch file reads for Pi via read_many with adaptive packing under output limits",
+  "author": "Gurpartap Singh",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gurpartap/pi-read-many.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gurpartap/pi-read-many/issues"
+  },
+  "homepage": "https://github.com/Gurpartap/pi-read-many",
+  "keywords": [
+    "pi",
+    "pi-extension",
+    "pi-package",
+    "read_many",
+    "read-many",
+    "file-reading",
+    "context-packing"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "index.ts",
+    "read-many.ts",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.40"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
