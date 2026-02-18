@@ -18,7 +18,7 @@ It helps the model inspect multiple files in one call instead of issuing many se
 pi install npm:pi-read-many
 ```
 
-### Alternative (git)
+### Alternative (source)
 
 ```bash
 pi install git:https://github.com/Gurpartap/pi-read-many
@@ -32,17 +32,10 @@ After install, use Pi normally. If Pi is already running when you install or upd
 
 ---
 
-## ⚡ Quick usage
+## 📝 Notes
 
-```json
-{
-  "files": [
-    { "path": "src/a.ts" },
-    { "path": "src/b.ts", "offset": 40, "limit": 120 }
-  ],
-  "stopOnError": false
-}
-```
+- `read_many` does **not** override built-in `read`.
+- `read_many` summarizes image attachments in combined text output; exact single-file image payload behavior remains in built-in `read`.
 
 ---
 
@@ -63,6 +56,18 @@ After install, use Pi normally. If Pi is already running when you install or upd
 - **Partial inclusion:** includes at most one partial section when needed.
 - **Error consistency:** errors are framed exactly like normal file blocks.
 - **Image-safe output:** image payloads are summarized in text.
+
+## 🔢 Example `read_many` input
+
+```json
+{
+  "files": [
+    { "path": "src/a.ts" },
+    { "path": "src/b.ts", "offset": 40, "limit": 120 }
+  ],
+  "stopOnError": false
+}
+```
 
 ---
 
@@ -117,13 +122,6 @@ For local one-off development loading:
 ```bash
 pi -e ./read-many.ts
 ```
-
----
-
-## 📝 Notes
-
-- `read_many` does **not** override built-in `read`.
-- For exact single-file image payload behavior, use regular `read` directly.
 
 ---
 

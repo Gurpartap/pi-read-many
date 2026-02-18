@@ -316,7 +316,7 @@ export function createReadManyTool(readToolFactory: typeof createReadTool = crea
 	return {
 		name: "read_many",
 		label: "read_many",
-		description: `Read multiple files in one call. Supports per-file offset/limit. Output uses per-file heredoc blocks (DICT_N_HASH). Under combined output limits (${DEFAULT_MAX_LINES} lines / ${formatSize(DEFAULT_MAX_BYTES)}), packing is adaptive: strict request-order by default, switch to smallest-first only if it includes more complete successful files; rendering order stays original.`,
+		description: `Read multiple files in one call with per-file offset/limit. Combined output uses per-file heredoc blocks (DICT_N_HASH); image attachments are summarized in text. Under combined output limits (${DEFAULT_MAX_LINES} lines / ${formatSize(DEFAULT_MAX_BYTES)}), packing is adaptive: strict request-order by default, switching to smallest-first only when it includes more complete successful files, while rendered section order stays original.`,
 		parameters: ReadManySchema,
 
 		async execute(
